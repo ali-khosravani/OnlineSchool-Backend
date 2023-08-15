@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fa" class="h-100" dir="rtl" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/assets/bootstrap/bootstrap-5.0.2-dist/css/bootstrap.rtl.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/index.css}">
+    <title>صقحه نخست</title>
+
+</head>
+<br><br>
+<body class="d-flex flex-column h-100">
+
+<header>
+    <!-- Fixed navbar -->
+    <div class="container">
+        <header class="fixed-top d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none" style="margin-right: 50px">
+                <img th:src="@{/assets/images/hat-logo.png}" height="50" width="50" alt="image">
+            </a>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="/" class="nav-link px-2 link-secondary">خانه</a></li>
+                <li><a href="/courses" class="nav-link px-2 link-dark">کلاس ها</a></li>
+                <li><a href="/privacy" class="nav-link px-2 link-dark">حریم شخصی</a></li>
+                <li><a href="/about" class="nav-link px-2 link-dark">درباره‌ما</a></li>
+                <li><a href="/contact" class="nav-link px-2 link-dark">ارتباط‌با‌ما</a></li>
+            </ul>
+
+            <div class="col-md-3 text-start">
+                <button type="button" class="btn btn-outline-primary me-2" onclick="window.location.href='login'">ورود</button>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='register'">ثبت نام</button>
+            </div>
+        </header>
+    </div>
+
+</header>
+
+<!-- Begin page content -->
+<main class="px-3" style="margin: 250px auto;text-align: center">
+    <h1>Online School</h1>
+    <h3>به مدرسه آنلاین خوش آمدید</h3>
+    <p>یک مدرسه آن لاین برای تمام مردم ایران زمین</p>
+    <p>هیچ وقت برای یادگیری دیر نیست.با هم شروع می کنیم و تا آخر در کنار شما هستیم.</p>
+    <a href="/courses" class="btn btn-lg btn-secondary fw-bold">بیشتر بدانیم</a>
+</main>
+
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+        <span class="text-muted">طراحی شده توسط عبدالرضا سرلکی-دانشگاه آزاد اسلامی واحد شهر قدس</span>
+    </div>
+</footer>
+
+</body>
+</html>

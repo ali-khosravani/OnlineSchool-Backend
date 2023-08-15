@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fa" class="h-100" dir="rtl" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/assets/bootstrap/bootstrap-5.0.2-dist/css/bootstrap.rtl.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/reserved.css}">
+    <title>ثبت درس</title>
+</head>
+<body>
+<main class="flex-shrink-0">
+    <div class="container" style="padding-top: 60px">
+
+        <div style="text-align: center">
+            <div th:each="course:${courses}">
+                <div style="margin: 0 auto;width: 90%" >
+                  <h2>
+                      <p>درس <strong th:text="${course.getCourseName()}"></strong>&nbsp;با استاد <strong th:text="${course.getTeacherName()}"></strong>&nbsp;با موفقیت ثبت گردید.</p>
+                  </h2>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div style="clear: both">
+            <input type="button" onclick="window.location.href='/courses'" value="برگشت" class="btn btn-danger">
+        </div>
+
+    </div>
+</main>
+</body>
+</html>

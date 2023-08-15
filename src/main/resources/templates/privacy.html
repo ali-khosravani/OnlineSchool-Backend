@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa" class="h-100" dir="rtl" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/assets/bootstrap/bootstrap-5.0.2-dist/css/bootstrap.rtl.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/privacy.css}">
+    <title>حریم خصوصی</title>
+
+</head>
+<br><br>
+<body class="d-flex flex-column h-100">
+
+<header>
+    <!-- Fixed navbar -->
+    <div class="container">
+        <header class="fixed-top d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none" style="margin-right: 50px">
+                <img th:src="@{/assets/images/hat-logo.png}" height="50" width="50" alt="image">
+            </a>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="/" class="nav-link px-2 link-secondary">خانه</a></li>
+                <li><a href="/courses" class="nav-link px-2 link-dark">کلاس ها</a></li>
+                <li><a href="/privacy" class="nav-link px-2 link-dark">حریم شخصی</a></li>
+                <li><a href="/about" class="nav-link px-2 link-dark">درباره‌ما</a></li>
+                <li><a href="/contact" class="nav-link px-2 link-dark">ارتباط‌با‌ما</a></li>
+            </ul>
+
+            <div class="col-md-3 text-start">
+                <button type="button" class="btn btn-outline-primary me-2" onclick="window.location.href='login'">ورود</button>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='register'">ثبت نام</button>
+            </div>
+        </header>
+    </div>
+
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+    <div class="container" style="padding-top: 60px">
+        <img class="d-block mx-auto mb-4" th:src="@{/assets/images/hat-logo.png}" alt="" width="72" height="57">
+        <h1 class="mt-5">حریم خصوصی</h1>
+        <br>
+        <br>
+        <hr>
+        <p class="lead">سیستم مدرسه آن لاین با تاکید بر احترامی که برای کاربران قایل است ِبرای ثبت درخواست پذیرش و یا استفاده از برخی امکانات سایت اطلاعاتی را از کاربران درخواست می کند تا بتواند خدماتی امن و مطمین را به کاربران ارایه دهد.برای ثبت نام و رزرو کلاس و درس اطلاعاتی مانند ایمیل و شماره تلفن و رمز عبور نیاز می باشد.کلیه فعالیت های این سایت تحت نظر قوانین جمهوری اسلامی ایران می باشد.این سایت برای صحت سنجی اطلاعات کاربران مانند نام و نام خانوادگی ثبت شده در پروفایل هر کاربر مسیول می باشد.سایت مدرسه آن لاین به اطلاعات کوکی دسترسی داشته و از آنها استفاده می کند.تمام اطلاع رسانی های این وب سایت از طریق پیامک صورت می گیرد. </p>
+        <p>کلیه اطلاعات خواسته شده برای قوه قضاییه و پلیس فتا ارسال خواهند شد.</p>
+        <p>کلیه عواقب ناشی از افشای اطلاعات به عهده ی کاربر می باشد.</p>
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+        <span class="text-muted">طراحی شده توسط عبدالرضا سرلکی-دانشگاه آزاد اسلامی واحد شهر قدس</span>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fa" class="h-100" dir="rtl" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/assets/bootstrap/bootstrap-5.0.2-dist/css/bootstrap.rtl.css}">
+    <title>لیست کلاس ها</title>
+</head>
+<body>
+<main class="flex-shrink-0">
+    <div class="container" style="padding-top: 60px">
+        <img class="d-block mx-auto mb-4" th:src="@{/assets/images/hat-logo.png}" alt="" width="72" height="57">
+
+        <div style="text-align: center">
+            <div th:each="course:${courses}">
+                <div style="float: right;margin: 5px;width: 30%" >
+
+                        <img th:src="@{/assets/images/{id}(id = ${course.getImageUrl()})}" height="400" width="100%" alt="image"/>
+
+                    <div style="border: 1px solid #000000;margin: 1px;background-color: #0a53be;border-radius: 10px">
+                        <p>دوره پیشرفته: <strong th:text="${course.getCourseName()}"></strong></p>
+                    </div>
+                    <div style="border: 1px solid #000000;margin: 1px;background-color: #0b54bf;border-radius: 10px">
+                        <p>نام استاد: <strong th:text="${course.getTeacherName()}"></strong></p>
+                    </div>
+                    <div style="border: 1px solid #000000;margin: 1px;background-color: #0c55c0;border-radius: 10px">
+                        <p>قیمت فقط: <strong th:text="${course.getPrice()}"></strong>تومان</p>
+                    </div>
+                    <div style="border: 1px solid #000000;margin: 1px;background-color: #0d56c1;border-radius: 10px">
+                        <p>مدت دوره: <strong th:text="${course.getHours()}"></strong>ساعت</p>
+                    </div>
+                    <div style="border: 1px solid #000000;margin: 1px;background-color: #0d56c1;border-radius: 10px ;">
+                        <a th:href="@{/reserved/{id}(id=${course.id})}" >
+                            <p style="color: white"><strong> انتخاب کنید</strong></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div style="clear: both">
+        <input type="button" onclick="window.location.href='/'" value="برگشت" class="btn btn-danger">
+        </div>
+
+    </div>
+</main>
+</body>
+</html>

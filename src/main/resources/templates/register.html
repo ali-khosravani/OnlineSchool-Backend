@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fa" class="h-100" dir="rtl" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/assets/bootstrap/bootstrap-5.0.2-dist/css/bootstrap.rtl.css}">
+    <title>ثبت نام </title>
+
+</head>
+<br>
+<br>
+<body class="d-flex flex-column h-100">
+
+<header>
+    <!-- Fixed navbar -->
+    <div class="container">
+        <header class="fixed-top d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
+               style="margin-right: 50px">
+                <img th:src="@{/assets/images/hat-logo.png}" height="50" width="50" alt="No image load">
+            </a>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="/" class="nav-link px-2 link-secondary">خانه</a></li>
+                <li><a href="/courses" class="nav-link px-2 link-dark">کلاس ها</a></li>
+                <li><a href="/privacy" class="nav-link px-2 link-dark">حریم شخصی</a></li>
+                <li><a href="/about" class="nav-link px-2 link-dark">درباره‌ما</a></li>
+                <li><a href="/contact" class="nav-link px-2 link-dark">ارتباط‌با‌ما</a></li>
+            </ul>
+
+            <div class="col-md-3 text-start">
+                <button type="button" class="btn btn-outline-primary me-2" onclick="window.location.href='login'">ورود
+                </button>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='register'">ثبت نام</button>
+            </div>
+        </header>
+    </div>
+
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+    <div class="container" style="padding-top: 60px">
+        <img class="d-block mx-auto mb-4" th:src="@{/assets/images/hat-logo.png}" alt="" width="144"
+             height="144">
+
+        <form>
+            <div class="row">
+                <div class="col">
+                    <label for="inputName">نام</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="مثلا عبدالرضا">
+                </div>
+                <div class="col">
+                    <label for="inputLastname"></label>
+                    <input type="text" class="form-control" id="inputLastname" placeholder="مثلا سرلکی">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <label for="inputEmail4">ایمیل</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="ایمیل">
+                </div>
+                <div class="col">
+                    <label for="inputPassword4">رمز عبور</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="*******">
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="inputAddress">آدرس منزل</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="شهرقدس میدان قدس بلوار کلهر دانشگاه شهرقدس">
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <label for="inputState">استان</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>تهران</option>
+                        <option>شبراز</option>
+                        <option>اصفهان</option>
+                        <option>سایر</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="inputCity">شهر</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col">
+                    <label for="inputZip">کد پستی</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        قوانین سایت را می پذیرم
+                    </label>
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">ثبت نام</button>
+        </form>
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+        <span class="text-muted">طراحی شده توسط عبدالرضا سرلکی-دانشگاه آزاد اسلامی واحد شهر قدس</span>
+    </div>
+</footer>
+
+</body>
+</html>
